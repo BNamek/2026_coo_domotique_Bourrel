@@ -2,8 +2,8 @@ public class Lampe implements Peripherique{
     /**
      * Attributs
      */
-    String nom;
-    boolean allumee;
+    private String nom;
+    private boolean allumee;
 
     /**
      * Constructeur avec parametre
