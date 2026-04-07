@@ -91,5 +91,4 @@ public class Main {
 		Lampe l4 = new Lampe("Lampe4");
 		t.ajouterLampe(l4);
 	}
-
 }
