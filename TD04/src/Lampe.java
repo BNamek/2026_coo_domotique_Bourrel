@@ -1,0 +1,52 @@
+public class Lampe{
+    /**
+     * Attributs
+     */
+    String nom;
+    boolean allumee;
+
+    /**
+     * Constructeur avec parametre
+     * @param n chaine de caractere qui correspond au nom de la lampe
+     */
+    public Lampe(String n){
+        this.nom=n;
+        this.allumee=false;
+    }
+
+    /**
+     * méthode allumer qui permet d'allumer la lampe
+     */
+    public void allumer(){
+        this.allumee=true;
+    }
+
+    /**
+     * méthode eteindre qui permet d'eteindre la lampe
+     */
+    public void eteindre(){
+        this.allumee=false;
+    }
+
+    /**
+     * getter pour savoir si la lampe est allume
+     * @return Allumee
+     */
+    public boolean isAllume() {
+        return allumee;
+    }
+
+    /**
+     * Methoe to string sous la forme nom + "On/Off"
+     * @return
+     */
+    public String toString() {
+        String r = "";
+        if (this.allumee) {
+            r = "On";
+        } else {
+            r = "Off";
+        }
+        return (nom + ": " + r);
+    }
+}
