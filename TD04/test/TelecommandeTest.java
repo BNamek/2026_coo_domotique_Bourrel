@@ -17,7 +17,7 @@ public class TelecommandeTest {
         Lampe lampe = new Lampe("Salon");
 
         // 2. Bloc exécutant la méthode de test
-        telecommande.ajouterLampe(lampe);
+        telecommande.ajouterPeripherique(lampe);
 
         // 3. Bloc vérifiant les résultats obtenus
         String resultat = telecommande.toString();
@@ -32,11 +32,11 @@ public class TelecommandeTest {
     void testAjouterLampeTelecommandeUnElement() {
         // 1. Bloc de préparation des données
         Telecommande telecommande = new Telecommande();
-        telecommande.ajouterLampe(new Lampe("Cuisine"));
+        telecommande.ajouterPeripherique(new Lampe("Cuisine"));
         Lampe lampe = new Lampe("Chambre");
 
         // 2. Bloc exécutant la méthode de test
-        telecommande.ajouterLampe(lampe);
+        telecommande.ajouterPeripherique(lampe);
 
         // 3. Bloc vérifiant les résultats obtenus
         String resultat = telecommande.toString();
@@ -53,10 +53,10 @@ public class TelecommandeTest {
         // 1. Bloc de préparation des données
         Telecommande telecommande = new Telecommande();
         Lampe lampe = new Lampe("Salon");
-        telecommande.ajouterLampe(lampe);
+        telecommande.ajouterPeripherique(lampe);
 
         // 2. Bloc exécutant la méthode de test
-        telecommande.activerLampe(0);
+        telecommande.activerPeripherique(0);
 
         // 3. Bloc vérifiant les résultats obtenus
         String resultat = telecommande.toString();
@@ -71,11 +71,11 @@ public class TelecommandeTest {
     void testActiverLampePosition1() {
         // 1. Bloc de préparation des données
         Telecommande telecommande = new Telecommande();
-        telecommande.ajouterLampe(new Lampe("Entrée"));
-        telecommande.ajouterLampe(new Lampe("Bureau"));
+        telecommande.ajouterPeripherique(new Lampe("Entrée"));
+        telecommande.ajouterPeripherique(new Lampe("Bureau"));
 
         // 2. Bloc exécutant la méthode de test
-        telecommande.activerLampe(1);
+        telecommande.activerPeripherique(1);
 
         // 3. Bloc vérifiant les résultats obtenus
         String resultat = telecommande.toString();
@@ -90,13 +90,13 @@ public class TelecommandeTest {
     void testActiverLampeInexistante() {
         // 1. Bloc de préparation des données
         Telecommande telecommande = new Telecommande();
-        telecommande.ajouterLampe(new Lampe("Garage"));
+        telecommande.ajouterPeripherique(new Lampe("Garage"));
 
         // 2. Bloc exécutant la méthode de test
 
         // 3. Bloc vérifiant les résultats obtenus
         assertDoesNotThrow(() -> {
-            telecommande.activerLampe(99);
+            telecommande.activerPeripherique(99);
         });
     }
 }
