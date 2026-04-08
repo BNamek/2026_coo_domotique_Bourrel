@@ -1,9 +1,12 @@
+/**
+ * Classe qui represente une Lampe qui impletemente Peripherique
+ */
 public class Lampe implements Peripherique{
     /**
      * Attributs
      */
-    private String nom;
-    private boolean allumee;
+    private String nom; // Chaine de caracteres qui est le nom de la lampe
+    private boolean allumee; // Booleen permettant de savoir si la lampe est allume(true) ou eteinte(false)
 
     /**
      * Constructeur avec parametre

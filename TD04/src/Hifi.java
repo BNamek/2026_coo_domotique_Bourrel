@@ -1,5 +1,5 @@
 /**
- * classe qui represente une chaine hifi
+ * classe qui represente une chaine hifi qui impletemente Peripherique
  */
 class Hifi implements Peripherique{
 
