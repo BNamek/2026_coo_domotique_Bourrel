@@ -8,6 +8,10 @@ public class Television implements Peripherique{
      */
     private int luminosite = 0;
 
+    public Television(){
+        this.luminosite=0;
+    }
+
     /**
      * permet d'allumer ou d'augmenter la luminosite de l'ecran
      */
