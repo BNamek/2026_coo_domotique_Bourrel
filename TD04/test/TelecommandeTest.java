@@ -99,4 +99,42 @@ public class TelecommandeTest {
             telecommande.activerPeripherique(99);
         });
     }
+
+    @Test
+    void testAllumerCheminee() {
+        Telecommande telecommande = new Telecommande();
+        Cheminee cheminee = new Cheminee();
+        Chemineeadaptateur adaptateur = new Chemineeadaptateur(cheminee);
+
+        telecommande.ajouterPeripherique(adaptateur);
+        telecommande.activerPeripherique(0);
+
+        assertEquals(10, cheminee.getLumiere());
+    }
+
+    @Test
+    void testAllumerChemineeDeuxFois() {
+        Telecommande telecommande = new Telecommande();
+        Cheminee cheminee = new Cheminee();
+        Chemineeadaptateur adaptateur = new Chemineeadaptateur(cheminee);
+
+        telecommande.ajouterPeripherique(adaptateur);
+        telecommande.activerPeripherique(0);
+        telecommande.activerPeripherique(0);
+
+        assertEquals(20, cheminee.getLumiere());
+    }
+
+    @Test
+    void testEteindreCheminee() {
+        Telecommande telecommande = new Telecommande();
+        Cheminee cheminee = new Cheminee();
+        Chemineeadaptateur adaptateur = new Chemineeadaptateur(cheminee);
+
+        telecommande.ajouterPeripherique(adaptateur);
+        telecommande.activerPeripherique(0);
+        telecommande.desactiverPeripherique(0);
+
+        assertEquals(0, cheminee.getLumiere());
+    }
 }

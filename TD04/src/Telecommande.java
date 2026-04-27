@@ -53,6 +53,14 @@ class Telecommande {
     }
 
     /**
+     * getter pour avoir le nombre de peripheriques dans la telecommande
+     * @return entier correspondant au nombre de peripheriques
+     */
+    public int getNombre() {
+        return peripheriques.size();
+    }
+
+    /**
      * Méthode toString
      * @return une description de la telecommande, des peripherique
      */

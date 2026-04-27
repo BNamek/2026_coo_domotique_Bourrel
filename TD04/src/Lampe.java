@@ -40,7 +40,7 @@ public class Lampe implements Peripherique{
     }
 
     /**
-     * Methoe to string sous la forme nom + "On/Off"
+     * Methode to string sous la forme nom + "On/Off"
      * @return
      */
     public String toString() {
